@@ -11,10 +11,13 @@ public class Petterson extends Thread {
         petterson();
     }
     
-    
+    // Mutex : Yes
+    // No deadlocks : Yes
+    // No extra time : Yes 
+    // No starvation : Yes
     public void petterson(){
         
-        while (counter < 19) {
+        while (counter < 20) {
             
             if (Integer.parseInt(currentThread().getName()) == 0){  // Thread 0 
                 

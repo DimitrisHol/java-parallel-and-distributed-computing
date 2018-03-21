@@ -9,7 +9,7 @@ public class SwitchLock extends Thread{
     
     public void run(){
     	
-    	
+    	//ΕΝΑΛΛΑΓΗ
     	switchLock();
     }
 	
@@ -30,7 +30,7 @@ public class SwitchLock extends Thread{
             
             //Exit Critical Section
             
-            token = (token + 1) % 2;
+            token = (token + 1) % 3;
             
             
         }
@@ -43,13 +43,14 @@ public class SwitchLock extends Thread{
 
         SwitchLock thread0 = new SwitchLock();
         SwitchLock thread1 = new SwitchLock();
-
+        SwitchLock thread2 = new SwitchLock();
 
         thread0.setName("0");
         thread1.setName("1");
+        thread2.setName("2");
         thread0.start();
         thread1.start();
-        
+        thread2.start();
 
         
     }
