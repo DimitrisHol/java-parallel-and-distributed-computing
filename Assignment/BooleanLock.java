@@ -1,16 +1,16 @@
-public class ThreadsExample extends Thread{
+public class BooleanLock extends Thread{
 
     static private boolean lock = false;
     static private int counter = 0;
 
 
-    public ThreadsExample (){
+    public BooleanLock (){
     }
 
 
     public void run (){
 
-        // Λογικη μεταβλητη
+        // Ξ›ΞΏΞ³ΞΉΞΊΞ· ΞΌΞµΟ„Ξ±Ξ²Ξ»Ξ·Ο„Ξ·
     	booleanLock();
 
     }
@@ -41,8 +41,8 @@ public class ThreadsExample extends Thread{
 
 
 
-        ThreadsExample thread0 = new ThreadsExample();
-        ThreadsExample thread1 = new ThreadsExample();
+        BooleanLock thread0 = new BooleanLock();
+        BooleanLock thread1 = new BooleanLock();
 
 
         thread0.setName("0");
