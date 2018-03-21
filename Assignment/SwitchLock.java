@@ -41,8 +41,8 @@ public class SwitchLock extends Thread{
 
 
 
-        ThreadsExample thread0 = new ThreadsExample();
-        ThreadsExample thread1 = new ThreadsExample();
+        SwitchLock thread0 = new SwitchLock();
+        SwitchLock thread1 = new SwitchLock();
 
 
         thread0.setName("0");
