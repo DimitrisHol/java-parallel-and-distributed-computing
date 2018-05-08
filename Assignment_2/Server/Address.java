@@ -1,20 +1,23 @@
 public class Address {
 
       private String IP;
-      private String Name;
+      private String name;
 
 
       public Address (String IP , String Name){
 
          this.IP = IP;
-         this.Name = Name;
+         this.name = Name;
       }
 
 		 	public String getIP(){
-				return this.IP;
+				return IP;
 			}
 			public String getName(){
-				return this.Name;
+				return name;
 			}
+      public void updateName(String newName){
+        this.name = newName;
+      }
 
    }

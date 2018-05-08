@@ -33,7 +33,7 @@ public class FastClientProtocol {
 
 	 // Now create matcher object.
 	 Matcher m = r.matcher(line);
-	 return m.matches() || line.equals("CLOSE");
-	 // return true;
+	 // return m.matches() || line.equals("CLOSE");
+	 return true;
 	}
 }
