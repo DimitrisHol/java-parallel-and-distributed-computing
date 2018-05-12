@@ -10,13 +10,13 @@ public class Address {
          this.name = Name;
       }
 
-		 	public String getIP(){
+		 	public synchronized String getIP(){
 				return IP;
 			}
-			public String getName(){
+			public synchronized String getName(){
 				return name;
 			}
-      public void updateName(String newName){
+      public synchronized void updateName(String newName){
         this.name = newName;
       }
 
