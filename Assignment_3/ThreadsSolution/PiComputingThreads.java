@@ -6,13 +6,13 @@ public static void main(String[] args) {
   int numThreads = 0;
 
   //Parsing numSteps
-  if (args.length != 2) {
+  if (args.length != 1) {
     System.out.println("arguments:  number_of_steps");
     System.exit(1);
   }
   try {
     numSteps = Long.parseLong(args[0]);
-    numThreads = Integer.parseInt(args[1]);
+
 
   } catch (NumberFormatException e) {
     System.out.println("argument "+ args[0] +" must be long int");
@@ -22,8 +22,8 @@ public static void main(String[] args) {
   // Get the number of available cores.
   int cores = Runtime.getRuntime().availableProcessors();
 
-  //Set the number of threads to run.
-  // numThreads = cores;
+  // Set the number of threads to run.
+  numThreads = cores;
 
   //Cores are defined by user
   System.out.println("cores = " + numThreads);
