@@ -26,7 +26,7 @@ public static void main(String[] args) {
   numThreads = cores;
 
   //Cores are defined by user
-  System.out.println("cores = " + numThreads);
+  // System.out.println("cores = " + numThreads);
 
   //Array of numSteps to store results coming from Threads.
   double[] localSums = new double[numThreads];

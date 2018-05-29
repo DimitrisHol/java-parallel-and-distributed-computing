@@ -43,6 +43,6 @@ class GroupThread extends Thread {
     localSums[myId] = 4 * sum * step;
 
 
-    System.out.printf("thread %d , Response time : %f seconds \n" ,myId , (double)(System.nanoTime() - startTime) / 1000000000);
+    // System.out.printf("thread %d , Response time : %f seconds \n" ,myId , (double)(System.nanoTime() - startTime) / 1000000000);
     }
 }

@@ -1,11 +1,11 @@
 echo "----------------------------"
-java PiComputingThreads 100
+java MasterTCP 100
 echo "----------------------------"
-java PiComputingThreads 10000
+java MasterTCP 10000
 echo "----------------------------"
-java PiComputingThreads 1000000
+java MasterTCP 1000000
 echo "----------------------------"
-java PiComputingThreads 100000000
+java MasterTCP 100000000
 echo "----------------------------"
-java PiComputingThreads 10000000000
+java MasterTCP 10000000000
 echo "----------------------------"
