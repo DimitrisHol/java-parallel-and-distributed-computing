@@ -42,13 +42,13 @@ public class MasterTCP {
 		OutputStream os = dataSocket.getOutputStream();
 		PrintWriter out = new PrintWriter(os,true);
 
-		// MasterProtocol app = new MasterProtocol();
+		// MasterProtocol app = new MasterProtocol(); // Not realy worth using Protocol? (1 LOC)
 		String inmsg , outmsg;
 		long startTime;
 
 		startTime = System.nanoTime();
 
-		//Divide and assign work to our... volunteers.
+		//Divide and assign work to workers.
 		for (int i= 0; i< numThreads; i++){
 
 			//Divide
@@ -56,19 +56,20 @@ public class MasterTCP {
 			long stop = start + (numSteps / numThreads);
 			if (i == numThreads -1) stop = numSteps;
 
-			//Send numsteps , start , finish to MasterProtocol?
+			//MasterProtocol is this :
 			outmsg =numSteps + "-"  + String.valueOf(start) + "-" + String.valueOf(stop);
 
 			//Conquer
 			out.println(outmsg);
 			startTime = System.nanoTime();
 		}
-		//Work Complete
+		//Work sent to all workers, awaiting responses.
 		out.println("CLOSE");
 
 		int counter = 0;
 		double pi = 0;
 
+		//We are expecting as many answers as number of workers.
 		while (counter < numThreads){
 			inmsg = in.readLine();
 			pi += Double.parseDouble(inmsg);

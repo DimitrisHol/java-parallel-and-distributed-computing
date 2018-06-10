@@ -8,7 +8,7 @@ class WorkerThread extends Thread
 	// We receive this as a parameter in MultithreadedWorkerServer
 	private Socket dataSocket;
 
-	// Input and output streams (Keyboard and Monitor)
+	// Input and output streams
 	private InputStream is;
   private BufferedReader in;
 	private OutputStream os;
@@ -31,8 +31,6 @@ class WorkerThread extends Thread
 	public void run()
 	{
    		String inmsg, outmsg;
-
-
 
 		try {
 				inmsg = in.readLine();

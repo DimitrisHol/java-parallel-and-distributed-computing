@@ -10,7 +10,15 @@ public class WorkerProtocol {
 		if (theInput.equals("CLOSE")){
 			return "CLOSE";
 		}
+
+
+		//Split input string to parse into Long
 		String array1[]= theInput.split("-");
+
+		//Input = 100-0-25
+		// 100 = numSteps
+		// 0 = start
+		// 25 = stop
 
 		long numSteps = Long.valueOf(array1[0]);
 		long start = Long.valueOf(array1[1]);
@@ -24,6 +32,8 @@ public class WorkerProtocol {
       double x = ((double)i +0.5) * step;
       sum += 1 / (1.0 + x*x);
     }
+
+		//Return value as a string.
     String theOutput = Double.toString(4 * sum * step);
 
 		return theOutput;

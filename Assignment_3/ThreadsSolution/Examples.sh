@@ -7,5 +7,5 @@ java PiComputingThreads 1000000
 echo "----------------------------"
 java PiComputingThreads 100000000
 echo "----------------------------"
-java PiComputingThreads 10000000000
-echo "----------------------------"
+#java PiComputingThreads 10000000000
+#echo "----------------------------"

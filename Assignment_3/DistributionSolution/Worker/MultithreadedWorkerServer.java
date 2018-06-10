@@ -10,7 +10,7 @@ public class MultithreadedWorkerServer {
 		//Opening the listening socket.
 		ServerSocket connectionSocket = new ServerSocket(PORT);
 
-		int counter = 0;
+		int counter = 0;	//For debbuging
 		while (true) {
 
 			System.out.println("Server is listening to port: " + PORT);
